@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Ticket Generator</title>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  
+  <!-- Form starts -->
+  <header>
+    <img src="assets/images/logo-full.svg" alt="" class="logo">
+    <h1 id="top__text">
+      Your Journey to Coding Conf 2025 Starts Here!
+    </h1>
+    <p id="bottom__text">
+      Secure your spot at next year's biggest coding conference.
+    </p>
+  </header>
+
+  <main>
+    <form action="">
+      <div class="upload">
+        <label for="avatar">
+          Upload Avatar
+        </label>
+
+        <div class="upload__avatar" id="drop__zone">
+          <div class="upload__icon">
+            <a href="#" id="file__select">
+              <img src="assets/images/icon-upload.svg" alt="upload icon">
+            </a>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display:none">
+            <img id="thumbnail">
+          </div>
+
+          <div id="file__control">
+            <span class="file__msg" data-visible="true">Drag and drop or click to upload</span>          
+          </div>
+        </div>
+
+        <p>
+          <img src="assets/images/icon-info.svg" alt="icon information">
+          <span>
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </span>
+        </p>
+      </div>
+
+      <div class="user__information">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+  
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" value="example@email.com">
+        </div>
+  
+        <div>
+          <label for="github">Github Username</label>
+          <input type="text" name="github" id="github" value="@yourusername">
+        </div>
+
+        <div>
+          <input type="submit" value="Generate My Ticket" id="submit__form">
+        </div>
+      </div> 
+    </form>    
+
+    <article id="ticket__index">
+      <div class="ticket__header">
+          <h1>
+              Congrats, <span class="user__name" id="custom__name"></span>!
+              Your ticket is ready.
+          </h1>
+          <p>
+              We've emailed your ticket to <span class="user__email"></span>
+              and will send updates in the run up to the event.
+          </p>
+      </div>
+      <div class="ticket">
+          <img src="assets/images/pattern-ticket.svg" alt="ticket icon">
+          <div class="pf" id="ticket__date">
+              <img src="assets/images/logo-full.svg" alt="">
+              <span class="date"></span>
+          </div>
+          <div class="pf" id="ticket__user">
+              <img id="user__avatar"/>
+              <div>
+                  <span class="user__name">Jonatan Kristof</span>
+                  <span class="user__github">
+                      <img src="assets/images/icon-github.svg" alt="github icon">
+                      <span class="github"></span>
+                  </span>
+              </div>
+          </div>
+      </div>
+  </article>
+  </main>
+</body>
+</html>
